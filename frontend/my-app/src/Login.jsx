@@ -1,10 +1,49 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import {Link} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export const Login = (props) => {
     const initialValues = { email: "", password: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false); //flag for submit
+    const navigate = useNavigate();
+
+//     async function login(event) {
+//         event.preventDefault();
+//         try {
+//           await axios.post("", {
+//             email: email,
+//             password: password,
+//             }).then((res) => 
+//             {
+//              console.log(res.data);
+             
+//              if (res.data.message == "Email does not exist") 
+//              {
+//                alert("Email does not exist");
+//              } 
+//              else if(res.data.message == "Login Successful!")
+//              { 
+                
+//                 console.log("Login successful!");
+//                 navigate('/home');
+//              } 
+//               else 
+//              { 
+//                 alert("Incorrect Email and Password fields do not match");
+//              }
+//           }, fail => {
+//            console.error(fail); // Error!
+//   });
+//         }
+ 
+//          catch (err) {
+//           alert(err);
+//         }
+      
+//       }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -54,13 +93,14 @@ export const Login = (props) => {
             <form className="login-form" onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
                 <input value={formValues.email} onChange={handleChange} type="email" placeholder="youremail@email.com" id="email" name="email" />
-                <p>{formErrors.email}</p>
+                <p className="hidden">{formErrors.email}</p>
                 <label htmlFor="password">Password</label>
                 <input value={formValues.password} onChange={handleChange} type="password" placeholder="********" id="password" name="password" />
-                <p>{formErrors.password}</p>
+                <p className="hidden">{formErrors.password}</p>
                 <button type="submit">Log In</button>
             </form>
-            <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Forgot Password?</button>
+            <Link to={'/forgotpassword'} className="link-btn">Forgot Password?</Link>
+            <Link to ={"/register"} className="link-btn">Create new registration</Link>
         </div>
     )
 }

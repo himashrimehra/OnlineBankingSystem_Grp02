@@ -1,63 +1,53 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import {Link} from "react-router-dom";
 
 export const Register = (props) => {
-    // const [email, setEmail] = useState('');
-    // const [pass, setPass] = useState('');
-    // const [name, setName] = useState('');
-    const initialValues = { email: "" };
-    const [formValues, setFormValues] = useState(initialValues);
-    const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
+    const [phone, setPhone] = useState('');
+    const [resaddress, setResAddress] = useState('');
+    const [permanentaddress, setParmanentAdress] = useState('');
+    const [aadharcard, setAadhar] = useState('');
+    const [dob, setDob] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(email);
-        setFormErrors(validate(formValues));
-        setIsSubmit(true);
+        console.log(email);
     }
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormValues({ ...formValues, [name]: value });
-    };
-
-    useEffect(() => {
-        console.log(formErrors);
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-          console.log(formValues);
-        }
-      }, [formErrors]); 
-
-      const validate = (values) => {
-        const errors = {};
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        if (!values.email) {
-          errors.email = "Email is required!";
-        } else if (!regex.test(values.email)) {
-          errors.email = "This is not a valid email format!";
-        }
-        return errors;
-      };    
 
     return (
         <div className="auth-form-container">
-        {Object.keys(formErrors).length === 0 && isSubmit ? (
-                <div className="ui message success">OTP sent to the requested Email ID.</div>
-            ) : (
-                console.log("")
-            )}
-            <h2>Reset Password</h2>
+            <h2>Register</h2>
         <form className="register-form" onSubmit={handleSubmit}>
-            {/* <label htmlFor="name">Full Name</label>
-            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="full Name" /> */}
+            <label htmlFor="name">Full Name</label>
+            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Full Name" />
             <label htmlFor="email">Email</label>
-            <input value={formValues.email} onChange={handleChange}type="email" placeholder="youremail@email.com" id="email" name="email" />
-            <p>{formErrors.email}</p>
-            {/* <label htmlFor="password">Enter new password</label>
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" /> */}
-            <button type="submit">Send OTP for verification</button>
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+            <label htmlFor="username">Username</label>
+            <input value={username} name="username" onChange={(e) => setUsername(e.target.value)} id="username" placeholder="username" />
+            <label htmlFor="password">Password</label>
+            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+            
+            <label htmlFor="phone">Phone number</label>
+            <input value={phone} name="phone" onChange={(e) => setPhone(e.target.value)} id="phone" placeholder="Phone number" />
+            
+            <label htmlFor="resaddress">Residential Address</label>
+            <input value={resaddress} name="resaddress" onChange={(e) => setResAddress(e.target.value)} id="resaddress" placeholder="Residential Address" />
+            
+            <label htmlFor="permanentaddress">Permanent Address</label>
+            <input value={permanentaddress} name="permanentaddress" onChange={(e) => setParmanentAdress(e.target.value)} id="permanentaddress" placeholder="Permanent Address" />
+
+            <label htmlFor="aadharcard">Aadhar Card Number</label>
+            <input value={aadharcard} name="aadharcard" onChange={(e) => setAadhar(e.target.value)} id="aadharcard" placeholder="Aadhar Card Number" />
+
+            <label htmlFor="dob">Date of Birth</label>
+            <input value={dob} name="dob" onChange={(e) => setDob(e.target.value)} id="dob" placeholder="Date of Birth" />
+
+            <button type="submit">Register</button>
         </form>
-        <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
+        <p><Link to ={"/"} className="link-btn">Already have an account? Login here.</Link></p>
     </div>
     )
 }
