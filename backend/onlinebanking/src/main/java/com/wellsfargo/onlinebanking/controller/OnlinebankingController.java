@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wellsfargo.onlinebanking.entity.User;
 import com.wellsfargo.onlinebanking.service.UserService;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "http://localhost:3000/")
 public class OnlinebankingController {
     @GetMapping("/allUsers")
     public List<User> getAllUsers() {
