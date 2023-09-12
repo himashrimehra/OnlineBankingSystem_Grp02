@@ -5,6 +5,7 @@ import { Login } from "./Login";
 import { ForgotPassword } from "./ForgotPassword";
 import {Register} from "./Register";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
+import {NewAccount} from "./NewAccount";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -23,6 +24,7 @@ function App() {
               <Route path="/" element= { <Login/>} />
               <Route path="/forgotpassword" element= { <ForgotPassword/>} />
               <Route path="/register" element= { <Register/>} />
+              <Route path="/newaccount" element= { <NewAccount/>} />
             </Routes>
         </BrowserRouter>
     </div>
