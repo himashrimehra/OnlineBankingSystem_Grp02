@@ -1,10 +1,10 @@
-package com.bank.SpringBank;
+package com.wellsfargo.onlinebanking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBankApplicationTests {
+class OnlinebankingApplicationTests {
 
 	@Test
 	void contextLoads() {
