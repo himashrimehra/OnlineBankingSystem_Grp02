@@ -10,40 +10,40 @@ export const Login = (props) => {
     const [isSubmit, setIsSubmit] = useState(false); //flag for submit
     const navigate = useNavigate();
 
-//     async function login(event) {
-//         event.preventDefault();
-//         try {
-//           await axios.post("", {
-//             email: email,
-//             password: password,
-//             }).then((res) => 
-//             {
-//              console.log(res.data);
+    async function login(event) {
+        event.preventDefault();
+        try {
+          await axios.post("http://localhost:8080/users/createUser", {
+            email: formValues.email,
+            password: formValues.password,
+            }).then((res) => 
+            {
+             console.log(res.data);
              
-//              if (res.data.message == "Email does not exist") 
-//              {
-//                alert("Email does not exist");
-//              } 
-//              else if(res.data.message == "Login Successful!")
-//              { 
+             if (res.data.message == "Email does not exist") 
+             {
+               alert("Email does not exist");
+             } 
+             else if(res.data.message == "Login Successful!")
+             { 
                 
-//                 console.log("Login successful!");
-//                 navigate('/home');
-//              } 
-//               else 
-//              { 
-//                 alert("Incorrect Email and Password fields do not match");
-//              }
-//           }, fail => {
-//            console.error(fail); // Error!
-//   });
-//         }
+                console.log("Login successful!");
+                navigate('/home');
+             } 
+              else 
+             { 
+                alert("Incorrect Email and Password fields do not match");
+             }
+          }, fail => {
+           console.error(fail); // Error!
+  });
+        }
  
-//          catch (err) {
-//           alert(err);
-//         }
+         catch (err) {
+          alert(err);
+        }
       
-//       }
+      }
 
     const handleSubmit = (e) => {
         e.preventDefault();

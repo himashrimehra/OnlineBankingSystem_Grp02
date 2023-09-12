@@ -8,7 +8,7 @@ export const Register = (props) => {
     const [username, setUsername] = useState('');
     const [phone, setPhone] = useState('');
     const [resaddress, setResAddress] = useState('');
-    const [permanentaddress, setParmanentAdress] = useState('');
+    const [permanentaddress, setPermanentAdress] = useState('');
     const [aadharcard, setAadhar] = useState('');
     const [dob, setDob] = useState('');
 
@@ -37,7 +37,7 @@ export const Register = (props) => {
             <input value={resaddress} name="resaddress" onChange={(e) => setResAddress(e.target.value)} id="resaddress" placeholder="Residential Address" />
             
             <label htmlFor="permanentaddress">Permanent Address</label>
-            <input value={permanentaddress} name="permanentaddress" onChange={(e) => setParmanentAdress(e.target.value)} id="permanentaddress" placeholder="Permanent Address" />
+            <input value={permanentaddress} name="permanentaddress" onChange={(e) => setPermanentAdress(e.target.value)} id="permanentaddress" placeholder="Permanent Address" />
 
             <label htmlFor="aadharcard">Aadhar Card Number</label>
             <input value={aadharcard} name="aadharcard" onChange={(e) => setAadhar(e.target.value)} id="aadharcard" placeholder="Aadhar Card Number" />
