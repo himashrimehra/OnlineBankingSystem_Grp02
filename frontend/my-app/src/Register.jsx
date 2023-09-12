@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
+import RegisterService from "./service/RegisterService";
 
 export const Register = (props) => {
     const [email, setEmail] = useState('');
@@ -14,7 +15,15 @@ export const Register = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
+        RegisterService.registerService({
+            userId: name,
+            accountNumber: email,
+            passcode: pass
+        }).then(respone => {
+            if(respone.data != null) {
+                alert("Success")
+            }
+        })
     }
 
     return (
