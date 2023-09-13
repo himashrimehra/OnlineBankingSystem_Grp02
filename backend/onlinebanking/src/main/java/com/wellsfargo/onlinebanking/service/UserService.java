@@ -6,8 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.wellsfargo.onlinebanking.entity.LoginRequest;
 import com.wellsfargo.onlinebanking.entity.User;
-import com.wellsfargo.onlinebanking.userrepository.UserRepository;
+import com.wellsfargo.onlinebanking.repository.UserRepository;
 
 @Service
 public class UserService implements IUserService {
@@ -27,8 +28,15 @@ public class UserService implements IUserService {
 
     @Override
     public User createUser(User newUser) {
-        // TODO Auto-generated method stub
+        if(userRepo.findByName(newUser.getName()) != null)return null;
         return userRepo.save(newUser);
     }
 
+    @Override
+    public User login(LoginRequest loginRequest) {
+        User user = userRepo.findByUserName(loginRequest.getUsername());
+        String password= user.getPassword();
+        if(password.equals(loginRequest.getPassword()))return user;
+        else return null;
+    }    
 }

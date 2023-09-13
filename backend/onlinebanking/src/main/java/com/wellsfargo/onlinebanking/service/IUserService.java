@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.wellsfargo.onlinebanking.entity.LoginRequest;
 import com.wellsfargo.onlinebanking.entity.User;
 
 @Service
@@ -15,5 +16,7 @@ public interface IUserService {
     List<User> getAllUsers();
 
     User createUser(User newUser);
+
+    User login(LoginRequest loginRequest);
 
 }

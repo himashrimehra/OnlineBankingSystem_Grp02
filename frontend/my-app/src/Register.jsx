@@ -1,27 +1,36 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
-import RegisterService from "./service/RegisterService";
+import {Link, useNavigate} from "react-router-dom";
+import UserService from "./service/UserService";
 
 export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [name, setName] = useState('');
-    const [username, setUsername] = useState('');
     const [phone, setPhone] = useState('');
     const [resaddress, setResAddress] = useState('');
     const [permanentaddress, setPermanentAdress] = useState('');
     const [aadharcard, setAadhar] = useState('');
     const [dob, setDob] = useState('');
+    const [username, setUsername] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        RegisterService.registerService({
-            userId: name,
-            accountNumber: email,
-            passcode: pass
+        UserService.registerService({
+            name: name,
+            email: email,
+            password: pass,
+            userName: username,
+            phoneNumber: phone,
+            address: resaddress,
+            permanentAddress: permanentaddress,
+            aadhar: aadharcard,
+            dateOfBirth: dob
+
         }).then(respone => {
             if(respone.data != null) {
                 alert("Success")
+                navigate("/");
             }
         })
     }
@@ -34,11 +43,10 @@ export const Register = (props) => {
             <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Full Name" />
             <label htmlFor="email">Email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-            <label htmlFor="username">Username</label>
-            <input value={username} name="username" onChange={(e) => setUsername(e.target.value)} id="username" placeholder="username" />
             <label htmlFor="password">Password</label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-            
+            <label htmlFor="name">Username</label>
+            <input value={username} onChange = {(e) =>  setUsername(e.target.value)} type="username" placeholder="Enter Username"  id = "username" />
             <label htmlFor="phone">Phone number</label>
             <input value={phone} name="phone" onChange={(e) => setPhone(e.target.value)} id="phone" placeholder="Phone number" />
             

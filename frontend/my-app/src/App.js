@@ -8,11 +8,11 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import {NewAccount} from "./NewAccount";
 
 function App() {
-  const [currentForm, setCurrentForm] = useState('login');
+  // const [currentForm, setCurrentForm] = useState('login');
 
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  }
+  // const toggleForm = (formName) => {
+  //   setCurrentForm(formName);s
+  // }
 
   return (
     <div className="App">

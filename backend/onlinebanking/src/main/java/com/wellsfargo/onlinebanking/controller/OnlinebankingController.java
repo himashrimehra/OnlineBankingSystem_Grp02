@@ -2,6 +2,7 @@ package com.wellsfargo.onlinebanking.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.wellsfargo.onlinebanking.entity.LoginRequest;
 import com.wellsfargo.onlinebanking.entity.User;
 import com.wellsfargo.onlinebanking.service.UserService;
 
@@ -38,6 +39,10 @@ public class OnlinebankingController {
     @PostMapping("/createUser")
     public User createUser(@Validated @RequestBody User newUser) {
         return service.createUser(newUser);
+    }
+    @PostMapping("/login")
+    public User login(@RequestBody LoginRequest loginRequest){
+        return service.login(loginRequest);
     }
 
 }
