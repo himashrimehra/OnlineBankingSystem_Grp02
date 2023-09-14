@@ -6,13 +6,14 @@ import { ForgotPassword } from "./ForgotPassword";
 import {Register} from "./Register";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import {NewAccount} from "./NewAccount";
+import {Transaction} from "./Transaction";
 
 function App() {
-  // const [currentForm, setCurrentForm] = useState('login');
+  const [currentForm, setCurrentForm] = useState('login');
 
-  // const toggleForm = (formName) => {
-  //   setCurrentForm(formName);s
-  // }
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
 
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
               <Route path="/forgotpassword" element= { <ForgotPassword/>} />
               <Route path="/register" element= { <Register/>} />
               <Route path="/newaccount" element= { <NewAccount/>} />
+              <Route path="/transaction" element= { <Transaction/>} />
             </Routes>
         </BrowserRouter>
     </div>
