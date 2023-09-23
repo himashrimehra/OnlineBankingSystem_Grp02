@@ -6,13 +6,7 @@ const Navbar = () => {
   return (
     <nav className="navbar" >
       <Link to="/" className="navbar-brand" >
-        Wells Fargo Banking App
-      </Link>
-      <Link to="/" className="navbar-brand">
-        Email : admin@wellsfargo.com
-      </Link>
-      <Link to="/" className="navbar-brand">
-        Contact : 1800696969
+        Online Banking System
       </Link>
       {/* <ul className="navbar-links">
         <li>

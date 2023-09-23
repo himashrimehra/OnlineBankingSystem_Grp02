@@ -147,22 +147,8 @@ const Payment = () => {
                     </div>
                 </form>
             </div>
-            <div className="my-4">
-                <Card style={{ width: '18rem' }}>
-                    
-                    <Card.Body>
-                        {/* <Card.Title>Card Title</Card.Title> */}
-                        <Card.Text>
-                        Your Account Number : {fromAccount}
-                        </Card.Text>
-                        <Card.Text>
-                        Available Balance : {balance}
-                        </Card.Text>
-                        
-                    </Card.Body>
-                </Card>
-                
-            </div>
+            
+
             </div>
             <Footer> </Footer>
         </div>

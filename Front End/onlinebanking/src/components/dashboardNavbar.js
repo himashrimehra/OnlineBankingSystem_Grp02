@@ -19,7 +19,6 @@ const DashboardNavbar = () => {
   return (
     <Navbar expand="lg" className="navbar-body">
       <Container>
-        <Navbar.Brand to="/">Wells Fargo Banking App</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -28,20 +27,18 @@ const DashboardNavbar = () => {
             <NavDropdown title="Fund Transfer" id="basic-nav-dropdown">
               
               <NavDropdown.Item >
-                <Link className='btn btn-sm' to = {"/payment"} >Quick Transfer</Link>
+                <Link style={{textDecoration: "none", color: "black"}} to = {"/payment"} >Quick Transfer</Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item >
                 
-                <Link className='btn btn-sm' to ={"/withdraw"} >Withdraw Money</Link>
+                <Link style={{textDecoration: "none", color: "black"}} to ={"/withdraw"} >Withdraw Money</Link>
 
               </NavDropdown.Item>
             </NavDropdown>
-            <LinkContainer to="/resetPassword">
+            {/* <LinkContainer to="/resetPassword">
             <Nav.Link >Change Password</Nav.Link>
-            </LinkContainer>
-            
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            </LinkContainer> */}
 
             
 

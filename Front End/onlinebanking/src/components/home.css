@@ -8,12 +8,12 @@
     align-items: center;
     justify-content: flex-start; /* Change to flex-start for top alignment */
     height: 85vh;
-    background-image: url('https://th.bing.com/th/id/OIP.qvL4tHrDO_Wh2F2hipSt_gAAAA?pid=ImgDet&rs=1.yimg.com/uu/api/res/1.2/U3dbtNCkqPjp3Z9ksEVteQ--~B/aD0xOTk3O3c9MzAwMDtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2020-02/1cd93d50-4ece-11ea-bfb5-fe3091f6d2b2');
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    padding-top: 80px; /* Add padding to shift content down */
+    padding-top: 10px; /* Add padding to shift content down */
   }
   .home-heading {
     display: flex;
@@ -30,7 +30,7 @@
   /* Styling for the buttons */
   .home-button {
     border-radius: 30px;
-    background-color: white;
+    background-color: rgb(252,134,127);
     color: black;
     border: none;
     font-size: 25px;
@@ -38,19 +38,36 @@
     margin: 10px;
     cursor: pointer;
     border-radius: 4px;
-    transition: background-color 0.3s;
   }
   
   .home-button:hover {
-    background-color: #0056b3;
-    color: white !important;
+    background-color: rgb(149, 164, 255)!important;
+  }
+
+  .a:hover {
+    background-color: rgb(149, 164, 255)!important;
   }
   
   /* Styling for the link within the button */
   .home-button a {
     text-decoration: none;
-    color: rgb(223, 8, 8);
+    background-color: rgb(252,134,127);
+    color: black;
     font-weight: bold;
+  }
+
+  .weight {
+    text-decoration: none;
+    color: black;
+  }
+
+  .img-size {
+    width: auto;
+    max-height: 70%;
+  }
+
+  .space {
+    padding: 5px;
   }
   
 /* Container for the home page */

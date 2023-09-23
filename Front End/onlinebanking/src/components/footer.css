@@ -1,12 +1,13 @@
 /* Styling for the footer */
 footer {
-    background-color: #ffae00; /* Change background color to red */
+     /* Change background color to red */
     color:black;
     text-align: center;
     padding: 20px; 
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: rgb(171,178,251);
   }
   
   

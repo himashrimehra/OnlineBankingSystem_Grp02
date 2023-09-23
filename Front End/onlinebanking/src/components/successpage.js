@@ -6,9 +6,9 @@ function Successpage() {
   return (
     <div className="success-container">
       <h2>Congratulations!</h2>
-      <p>You have successfully submitted the request to open an account in our bank!</p>
-      <p>Kindly wait for admin to approve your request</p>
-      <p>You can go back to our <Link to="/login">login page</Link> and explore the different banking features that are provided by us.</p>
+      <p>Your request has been successfully submitted to open an account in our bank!</p>
+      <p>You are requested to wait for the admin to approve your request.</p>
+      <p><Link to="/login">Click here</Link> to go back to the login page.</p>
     </div>
   );
 }

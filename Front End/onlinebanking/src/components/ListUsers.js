@@ -144,7 +144,7 @@ function ListUsers() {
                                 </td>
                                 <td>{user.accountNumber}</td>
                                 <td> <Button onClick={(e) => handleActiveStatus(e, user.userId)} >{user.activeStatus ? "Active" : "Inactive"}</Button> </td>
-                                <td> <Button> <Link className='btn btn-sm' to={`/userTransaction?data=${encodeURIComponent(JSON.stringify(user.accountNumber))}`}>Show All Transactions</Link></Button></td>
+                                <td> <Button> <Link style={{textDecoration: "none", color: "black"}}to={`/userTransaction?data=${encodeURIComponent(JSON.stringify(user.accountNumber))}`}>Show All Transactions</Link></Button></td>
 
                                 
                         </tr>

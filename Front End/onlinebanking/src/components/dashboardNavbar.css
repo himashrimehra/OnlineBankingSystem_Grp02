@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffae00;
+    background-color: rgb(171,178,251);
     color: rgb(19, 15, 15);
     padding: 40px 40px;
     font-size: 15px;
@@ -25,13 +25,13 @@
   }
   
   .nav-link:hover {
-    color: #f8f9fa !important;
+    color: black !important;
     text-decoration: none;
   }
   
   /* Styling for the dropdown menu */
   .navbar-nav .nav-item.dropdown:hover .nav-link {
-    color: #f8f9fa !important;
+    color: black !important;
     text-decoration: none;
   }
   

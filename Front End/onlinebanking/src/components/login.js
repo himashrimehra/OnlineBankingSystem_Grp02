@@ -69,24 +69,29 @@ const Login = () => {
     <> 
    <Navbar />
     <div className="login-container">
-        <div className="offset-lg-3 col-lg-6" >
+    <div >
+      <img className="side-image" src=" https://v3designs.com.au/wp-content/uploads/2021/08/contect02.png"></img>
+    </div>
+    <div className="image-border">
+    </div>
+        <div className="offset-lg-3 col-lg-9" >
             <form onSubmit={ProceedLogin} className="container">
                 <div className="card">
                     <div className="card-header">
-                        <h2>User Login</h2>
+                        <h2>Login</h2>
                     </div>
                     <div className="card-body">
                         <div className="form-group">
-                            <label>User Name <span className="errmsg">*</span></label>
+                            <label>Username<span className="errmsg">*</span></label>
                             <input value={userId} onChange={e => userIdUpdate(e.target.value)} className="form-control"></input>
                         </div>
                         <div className="form-group">
-                            <label>Password <span className="errmsg">*</span></label>
+                            <label>Password<span className="errmsg">*</span></label>
                             <input type="password" value={password} onChange={e => passwordUpdate(e.target.value)} className="form-control"></input>
                         </div>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <p className="small">
-                          <a className="text-primary" href="/resetPassword">
+                          <a style={{"color":"black"}} href="/resetPassword">
                             Forgot password?
                           </a>
                         </p>
@@ -97,9 +102,10 @@ const Login = () => {
                         <span style={{"paddingRight": "20px"}}></span>
 
                         {/* Admin Login Link */}
-                        <Link className="btn btn-info" to={'/adminLogin'}>Admin Login</Link>
+                        <Link className="btn btn-primary" to={'/adminLogin'}>Admin Login</Link>
+                        <span style={{"paddingRight": "20px"}}></span>
 
-                        <Link className="btn btn-success" to={'/openAccount'}>New User? Apply for an account</Link>
+                        <Link className="btn btn-primary" to={'/openAccount'}>New User? Apply for an account</Link>
                     </div>
                 </div>
             </form>
@@ -111,3 +117,9 @@ const Login = () => {
 };
 
 export default Login;
+
+// https://www.vandelaydesign.com/wp-content/uploads/blog-design-1.jpg
+
+// https://v3designs.com.au/wp-content/uploads/2021/08/contect02.png
+
+// https://i.pinimg.com/originals/48/c1/2b/48c12b464aa6ed680093736d1b6b005f.png

@@ -85,7 +85,7 @@ function PersonalDetails() {
 
       <div style = {{padding: "10px"}}>
         <Button variant="primary" >
-        <Link to="/dashboard" className="btn btn-default">Back To Dashboard</Link>
+        <Link to="/dashboard" style={{textDecoration: "none", color: "black"}}>Back To Dashboard</Link>
         </Button>
       </div>
       

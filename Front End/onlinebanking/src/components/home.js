@@ -19,12 +19,14 @@ const Home = () => {
     <div>
       <Navbar />
       <div className="home-container">
-        <h1 className="home-heading">Welcome to our Banking App</h1>
-        <button className="home-button">
-          <Link to="/login">Login</Link>
+        {/* <h2 style={{color: "black"}}>Welcome to our Online Banking Application</h2> */}
+        <img className="img-size" src="https://minibankindia.com/assets/img/bbps/postpaid.png"></img>
+        <button className="btn btn-primary">
+          <Link className="weight" to="/login">Login</Link>
         </button> 
-        <button className="home-button">
-          <Link to="/openAccount">New User? Apply for an account</Link>
+        <div className="space"></div>
+        <button className="btn btn-primary">
+          <Link className="weight" to="/openAccount">New User? Apply for an account</Link>
         </button>
       </div>
       <Footer />

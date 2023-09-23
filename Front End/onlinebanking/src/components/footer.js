@@ -2,9 +2,10 @@ import React from 'react';
 import './footer.css';
 
 const Footer = () => {
+  const year=new Date().getFullYear();
   return (
     <footer className="footer">
-      &copy; {new Date().getFullYear()} Wells Fargo Bank App. All rights reserved.
+    Copyright &copy; {year}
     </footer>
   );
 };

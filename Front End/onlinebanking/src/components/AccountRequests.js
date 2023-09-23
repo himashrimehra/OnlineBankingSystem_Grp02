@@ -64,7 +64,7 @@ function AccountRequests() {
                                 <td>{req.email}</td>
                                 <td>
                                     <Button>
-                                         <Link className='btn btn-sm' to={`/admin/accountRequests/details?data=${encodeURIComponent(JSON.stringify(req))}`}>More Details</Link>
+                                         <Link style={{textDecoration: "none", color: "black"}} to={`/admin/accountRequests/details?data=${encodeURIComponent(JSON.stringify(req))}`}>More Details</Link>
                                     </Button>
                                 </td>
 

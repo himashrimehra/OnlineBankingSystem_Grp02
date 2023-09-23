@@ -95,7 +95,7 @@ const Signup = () => {
                 <form className="container" onSubmit={handlesubmit} style = {{padding: "20px"}}>
                     <div className="card">
                         <div className="card-header">
-                            <h1>Apply for Account</h1>
+                            <h1>Open an Account</h1>
                         </div>
                         <div className="card-body">
 
@@ -126,7 +126,7 @@ const Signup = () => {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="form-group">
-                                        <label>Aadhaar <span className="errmsg"></span></label>
+                                        <label>Aadhaar Card Number<span className="errmsg"></span></label>
                                         <input pattern="^$|^[0-9]{12}$" title="Enter valid 12 digit aadhaar number" value={aadhaar} onChange={e => aadhaarchange(e.target.value)} className="form-control"></input>
                                     </div>
                                 </div>
@@ -172,7 +172,7 @@ const Signup = () => {
                         <div className="card-footer">
                             <button type="submit" className="btn btn-primary">Submit</button>
                             <span style = {{padding : "10px"}}></span>
-                            <Link to={'/login'} className="btn btn-danger">Close</Link>
+                            <Link to={'/login'} className="btn btn-primary">Close</Link>
                         </div>
                     </div>
                 </form>

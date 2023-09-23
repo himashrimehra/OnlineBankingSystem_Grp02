@@ -66,6 +66,11 @@ const AdminLogin = () => {
     <> 
     <Navbar > </Navbar>
     <div className="login-container">
+    <div >
+      <img className="side-image" src="https://cdni.iconscout.com/illustration/premium/thumb/developer-doing-programming-opening-multi-working-tabs-on-the-desktop-2381447-1997255.png"></img>
+    </div>
+    <div className="image-border">
+    </div>
         <div className="offset-lg-3 col-lg-6" style={{ marginTop: '10px' }}>
             <form onSubmit={ProceedAdminLogin} className="container">
                 <div className="card">
@@ -85,7 +90,7 @@ const AdminLogin = () => {
                     <div className="card-footer">
                         <button type="submit" className="btn btn-primary">Login</button>
                         <span style={{"paddingRight": "20px"}}></span>
-                        <Link className="btn btn-success" to={'/login'}>Sign in to your User Account</Link>
+                        <Link className="btn btn-primary" to={'/login'}>Sign in to your User Account</Link>
                     </div>
                 </div>
             </form>

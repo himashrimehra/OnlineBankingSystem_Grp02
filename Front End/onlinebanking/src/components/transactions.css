@@ -12,7 +12,7 @@
   
   /* Styling for the table headers */
   .transaction-table th {
-    background-color: #007bff;
+    background-color: rgb(171,178,251);
     color: white;
     padding: 10px;
     text-align: left;
