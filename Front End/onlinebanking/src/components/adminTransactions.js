@@ -111,8 +111,8 @@ function AdminTransactions() {
       />
 
       <div style={{ padding: "10px" }}>
-        <Button className='btn-sm' variant="primary" >
-          <Link to="/admin/listUsers" className="btn btn-default">Back</Link>
+        <Button variant="primary" >
+          <Link to="/admin/listUsers" style={{textDecoration: "none", color: "black"}}>Back</Link>
         </Button>
       </div>
     </div>
