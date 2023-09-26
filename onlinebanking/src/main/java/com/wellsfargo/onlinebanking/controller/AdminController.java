@@ -98,7 +98,7 @@ public class AdminController {
 			throw new ResourceNotFoundException(ex.getMessage());
 		}
 		
-		return ResponseEntity.ok("Successfuly changed status!!");
+		return ResponseEntity.ok("Successfully changed status!!");
 	}
 	
 }

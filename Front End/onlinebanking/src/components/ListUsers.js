@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { toast } from "react-toastify";
 import React, { useState, useEffect } from 'react';
 import AdminNavbar from './AdminNavbar';
-import Footer from './footer';
+// import Footer from './footer';
 import { useNavigate } from 'react-router-dom';
 
 function ListUsers() {
@@ -151,7 +151,7 @@ function ListUsers() {
                     ))}
                 </tbody>
             </Table>
-            <Footer/> 
+          
         </>
     );
 }
