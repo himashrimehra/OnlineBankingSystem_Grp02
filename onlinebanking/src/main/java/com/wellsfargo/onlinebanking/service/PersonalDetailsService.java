@@ -83,7 +83,7 @@ public class PersonalDetailsService implements IPersonalDetailsService {
             
             otpRepo.save(verificationRequest);
 
-            return "OTP sent successfully.";
+            return "Your OTP is " + otp + " ";
         } else {
             throw new Error("Email not found!!");
         }
